@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
+import { createApp, VueElement } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+// 全局组件
+import components from './components.js'
+
+const app = createApp(App)
+app.use(components)
+app.mount('#app')
